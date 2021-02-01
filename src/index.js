@@ -9,6 +9,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 
+// @ts-ignore
 import gon from "gon";
 import reducer from "./redux";
 import App from "./App";

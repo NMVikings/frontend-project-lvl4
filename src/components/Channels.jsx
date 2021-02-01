@@ -1,0 +1,31 @@
+// @ts-check
+
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectChannels } from "../redux";
+
+const Channels = () => {
+  const channels = useSelector(selectChannels);
+
+  return (
+    <div className="col-3 border-right">
+      <div className="d-flex mb-2">
+        <span>Channels</span>
+      </div>
+      <ul className="nav flex-column nav-pills nav-fill">
+        {channels.map(({ name }) => (
+          <li className="nav-item">
+            <button
+              className="nav-link btn-block mb-2 text-left btn btn-light"
+              type="button"
+            >
+              {name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Channels;

@@ -1,3 +1,5 @@
+// @ts-check
+
 import { combineReducers } from "@reduxjs/toolkit";
 
 import channels from "./slices/channels";
@@ -6,4 +8,5 @@ import currentChannelId from "./slices/currentChannelId";
 
 const reducer = combineReducers({ channels, messages, currentChannelId });
 
+export * from "./selectors";
 export default reducer;
