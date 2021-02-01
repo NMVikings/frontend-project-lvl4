@@ -8,12 +8,13 @@ import "../assets/application.scss";
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
+import { configureStore } from "@reduxjs/toolkit";
 
 // @ts-ignore
+// eslint-disable-next-line import/no-unresolved
 import gon from "gon";
 import reducer from "./redux";
 import App from "./App";
-import { configureStore } from "@reduxjs/toolkit";
 
 if (process.env.NODE_ENV !== "production") {
   localStorage.debug = "chat:*";

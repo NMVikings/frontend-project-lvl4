@@ -13,8 +13,8 @@ const Channels = () => {
         <span>Channels</span>
       </div>
       <ul className="nav flex-column nav-pills nav-fill">
-        {channels.map(({ name }) => (
-          <li className="nav-item">
+        {channels.map(({ name, id }) => (
+          <li className="nav-item" key={id}>
             <button
               className="nav-link btn-block mb-2 text-left btn btn-light"
               type="button"
