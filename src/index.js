@@ -1,34 +1,31 @@
 // @ts-check
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
-import '../assets/application.scss';
+import "../assets/application.scss";
 
-import gon from 'gon';
+import React from "react";
+import { Provider } from "react-redux";
+import ReactDOM from "react-dom";
 
-if (process.env.NODE_ENV !== 'production') {
-  localStorage.debug = 'chat:*';
+import gon from "gon";
+import store from "./redux";
+import App from "./App";
+
+if (process.env.NODE_ENV !== "production") {
+  localStorage.debug = "chat:*";
 }
 
-const p = document.createElement('p');
-p.classList.add('card-text');
-p.textContent = 'It works!';
+const container = document.getElementById("chat");
 
-const h5 = document.createElement('h5');
-h5.classList.add('card-title');
-h5.textContent = 'Project frontend l4 boilerplate';
+const Root = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
 
-const cardBody = document.createElement('div');
-cardBody.classList.add('card-body');
-cardBody.append(h5, p);
+ReactDOM.render(<Root />, container);
 
-const card = document.createElement('div');
-card.classList.add('card', 'text-center');
-card.append(cardBody);
-
-const container = document.querySelector('#chat');
-container.append(card);
-
-console.log('it works!');
-console.log('gon', gon);
+console.log("it works!");
+console.log("gon", gon);
