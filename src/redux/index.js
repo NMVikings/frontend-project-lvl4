@@ -8,5 +8,8 @@ import currentChannelId from "./slices/currentChannelId";
 
 const reducer = combineReducers({ channels, messages, currentChannelId });
 
+export * from "./slices/channels";
+export * from "./slices/messages";
+export * from "./slices/currentChannelId";
 export * from "./selectors";
 export default reducer;
