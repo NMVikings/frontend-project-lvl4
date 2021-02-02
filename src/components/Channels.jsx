@@ -11,6 +11,9 @@ const Channels = () => {
     <div className="col-3 border-right">
       <div className="d-flex mb-2">
         <span>Channels</span>
+        <button className="ml-auto p-0 btn btn-link" type="button">
+          +
+        </button>
       </div>
       <ul className="nav flex-column nav-pills nav-fill">
         {channels.map(({ name, id }) => (

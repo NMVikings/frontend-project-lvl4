@@ -1,5 +1,7 @@
 // @ts-check
 
 const selectChannels = (state) => state.channels;
+const selectMessages = (state) => state.messages;
+const selectCurrentChannelId = (state) => state.currentChannelId;
 
-export { selectChannels };
+export { selectChannels, selectMessages, selectCurrentChannelId };
